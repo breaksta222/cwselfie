@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💜트리플에스 채원 셀카 월드컵💜</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="music-controls">
+        <button onclick="playMusic()">▶</button>
+        <button onclick="pauseMusic()">⏸</button>
+        <audio id="bg-music" loop>
+          <source src="images/Inner Dance.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+      
+  <h1>💜트리플에스 채원 셀카 월드컵💜</h1>
+
+  <div id="round-label">Round</div>
+
+  <div id="game-container">
+    <div class="image-container" id="left" onclick="selectImage('left')">
+      <img id="img-left" src="" alt="셀카 1" />
+      <p class="description" id="desc-left"></p>
+    </div>
+    <div class="image-container" id="right" onclick="selectImage('right')">
+      <img id="img-right" src="" alt="셀카 2" />
+      <p class="description" id="desc-right"></p>
+    </div>
+  </div>
+
+  <div id="progress-bar">
+    <div id="progress-fill"></div>
+    <span id="progress-text">0%</span>
+  </div>
+
+  <div id="result" style="display: none;">
+    <h2>💖최종 우승 셀카💖</h2>
+    <img id="final-img" src="" alt="최종 셀카" />
+    <p id="final-desc"></p>
+    <!-- 결과 화면 하단에 추가 -->
+    <div class="share-buttons">
+        <a id="twitter-share" href="#" target="_blank">X(트위터)로 공유하기 💜</a>
+        
+      </div>
+      <div class="share-buttons">
+      </div><button onclick="showRanking()">순위 보기 🏆</button>
+      </div>
+
+      <div id="ranking-box" style="display: none; margin-top: 30px;">
+        <h3>🏆 인기 셀카 TOP 3</h3>
+        <div id="ranking-list"></div>
+      </div>
+      
+
+  
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

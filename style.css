@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  body {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  #game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+  }
+  
+  .image-container {
+    width: 48%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-container:hover {
+    transform: scale(1.03);
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .description {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  /* 진행률 바 */
+  #progress-bar {
+    position: relative;
+    width: 90%;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    margin: 0 auto 20px auto;
+    overflow: hidden;
+  }
+  
+  #progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #c7a3e0;
+    transition: width 0.5s ease;
+  }
+  
+  #progress-text {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  /* 결과 화면 */
+  #result img {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 12px;
+  }
+  
+  .share-buttons a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #c7a3e0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+  
+  /* 반응형 */
+  @media (max-width: 768px) {
+    #game-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  
+    .image-container {
+      width: 100%;
+    }
+  
+    .image-container img {
+      aspect-ratio: 3/4;
+    }
+  }
+
+  #music-controls {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+  }
+  
+  #music-controls button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin: 2px;
+    padding: 5px 9px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
